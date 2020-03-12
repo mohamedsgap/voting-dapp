@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
-import index from './components/Home'
+import Index from './components/Home'
 
 import "./App.css";
 
@@ -69,7 +69,7 @@ class App extends Component {
         <div>The stored value is: {this.state.storageValue}</div>
         */}
         {/*<div>Mohamed lives here :)</div>*/}
-        <index />
+        <Index />
       </div>
     );
   }
