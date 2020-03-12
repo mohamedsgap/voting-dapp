@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.5",
+    "clsx": "^1.1.0",
+    "markdown-to-jsx": "^6.11.0",
     "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-final-form": "^6.3.5",
     "react-scripts": "3.2.0",
+    "validator": "^12.2.0",
     "web3": "1.2.2"
   },
   "scripts": {
