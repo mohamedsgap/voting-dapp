@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.9.0",
     "clsx": "^1.1.0",
     "markdown-to-jsx": "^6.11.0",
     "prop-types": "^15.7.2",
