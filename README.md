@@ -4,7 +4,7 @@ Build a decentralized voting app based on Ethereum Blockchain.
 
 ### To run the Smart Contract:
 ```js
-*** make sure that install truffle ***
+***make sure that you install truffle***
 
 truffle develop
 
