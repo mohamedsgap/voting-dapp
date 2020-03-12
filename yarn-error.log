@@ -1,0 +1,36 @@
+Arguments: 
+  /snap/node/2485/bin/node /home/mohamedsgap/.yarn/bin/yarn.js add props-types
+
+PATH: 
+  /home/mohamedsgap/.yarn/bin:/home/mohamedsgap/.config/yarn/global/node_modules/.bin:/home/mohamedsgap/.local/bin:/home/mohamedsgap/.yarn/bin:/home/mohamedsgap/.config/yarn/global/node_modules/.bin:/home/mohamedsgap/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  10.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/props-types: Not found
+      at Request.params.callback [as _callback] (/home/mohamedsgap/.yarn/lib/cli.js:66927:18)
+      at Request.self.callback (/home/mohamedsgap/.yarn/lib/cli.js:140586:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/home/mohamedsgap/.yarn/lib/cli.js:141558:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/home/mohamedsgap/.yarn/lib/cli.js:141480:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
