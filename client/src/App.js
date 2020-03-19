@@ -55,7 +55,6 @@ class App extends Component {
     }
     return (
       <div className="App">
-        {/*
         <h1>Good to Go!</h1>
         <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
@@ -67,9 +66,7 @@ class App extends Component {
           Try changing the value stored on <strong>line 40</strong> of App.js.
         </p>
         <div>The stored value is: {this.state.storageValue}</div>
-        */}
-        {/*<div>Mohamed lives here :)</div>*/}
-        <Index />
+        <div>Mohamed lives here :)</div>
       </div>
     );
   }
