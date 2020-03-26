@@ -65,7 +65,7 @@ class App extends Component {
         </p>
         <div>The stored value is: {this.state.storageValue}</div>
         <div>Mohamed lives here :)</div>
-        <div>Mohamed</div>
+        <div>Khaled hafez gonna work here</div>
       </div>
     );
   }
