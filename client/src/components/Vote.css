@@ -1,0 +1,43 @@
+.Vote {
+    padding: 10px 0 100px;
+}
+
+.Vote h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.Vote .description {
+    line-height: 1.6;
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto 15px;
+    color: #6a6a6a;
+}
+.Vote .card {
+    margin-bottom: 20px;
+}
+
+.Vote .card .card-title {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #08526d;
+}
+
+.Vote .card .card-link {
+    color: #ec1c23;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Vote .card .dropdown .btn{
+    color: #FFF;
+    background-color: #08526d;
+}
+
+
+.Vote .card .dropdown-menu .dropdown-item{
+
+    color: #FFF;
+    background-color: #08526d;
+}

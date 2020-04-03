@@ -1,0 +1,57 @@
+
+.home {
+height: 630px;
+background: url('/images/Ethereum1.jpg');
+background-size: cover;
+background-position: center;
+text-align: center;
+position: relative;
+}
+.home .home-information {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home .home-information .home-title{
+font-size: 60px;
+font-weight: bold;
+color: #fcff3d;
+} 
+
+
+.home .home-information .home-info {
+font-size: 35px;
+    color: #fcff3d;
+    margin-bottom: 20px;
+}
+
+.home .home-information .home-description {    
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fcff3d;
+    margin-bottom: 20px
+}
+
+.home  .home-information .home-btn{
+    background: #ec1c23;
+    color: #fff;
+    font-size: 18px;
+    width: 150px;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+
+.home .home-information .home-btn:hover {
+        background: #fff;
+        color: #ec1c23;
+        transition: .6s ease;
+}
+
+
+.home .home-information .home-description span {
+    color: #fcff3d
+}
