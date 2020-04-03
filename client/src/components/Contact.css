@@ -1,0 +1,112 @@
+
+.drop {
+    padding: 50px 0;
+    text-align: center
+}
+
+.drop .drop-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: #08526d;
+}
+
+.drop .drop-title span {
+    font-weight: normal;
+    color: #ec1c23;
+}
+
+.drop form {
+    width: 70%;
+    margin: auto;
+}
+
+.drop form input {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 5px;
+    margin-bottom: 10px
+}
+
+.drop form .form-input {
+    overflow: hidden
+}
+
+.drop form .form-input input {
+    width: 49%;
+}
+
+.drop form .form-input input[type=text] {
+    float: left
+}
+
+.drop form .form-input input[type=email] {
+    float: right
+}
+
+.drop form input.sub {
+    width: 100%;
+}
+
+.drop form textarea {
+    width: 100%;
+    outline: 0;
+    background: #ccc
+}
+
+.drop form input[type=submit] {
+    width: 35%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ec1c23;
+    border: 1px solid #ccc;
+    color: #EEE;
+    cursor: pointer
+}
+
+.drop form input[type=submit]:hover {
+    width: 35%;
+    height: 40px;
+    background: #08526d;
+    border: 1px solid #223344;
+    color: #ec1c23;
+    cursor: pointer;
+    transition: ease .7s;
+}
+
+@media (max-width:575px) {
+    .drop .drop-title {
+        font-size: 40px
+    }
+    
+    .drop form .form-input input {
+        width: 100%
+    }
+    
+    .drop form {
+        width: 90%
+    }
+
+     
+.drop form input[type=submit] {
+    width: 35%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ec1c23;
+    border: 1px solid #ccc;
+    color: #EEE;
+    cursor: pointer
+}
+
+.drop form input[type=submit]:hover {
+    width: 35%;
+    height: 40px;
+    background: #08526d;
+    border: 1px solid #223344;
+    color: #ec1c23;
+    cursor: pointer;
+    transition: ease .7s;
+}
+}
+
