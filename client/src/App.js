@@ -67,7 +67,7 @@ class App extends Component {
           <Route  path="/About" component={About} />
           <Route  path="/Vote" component={Vote} />
           <Route  path="/contact" component={Contact} />
-          <Footer />
+        <Footer />
       </BrowserRouter>
     );
   }
