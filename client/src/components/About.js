@@ -17,7 +17,6 @@ import Footer from './Footer.js'
                             <h1> Why Blockchain?</h1 >
                             <p>Borlaug's life and achievement are testimony to the far-reachin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th
-                           chin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th
                                 Borlaug's life and achievement are testimony to the far-reachin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th</p>    

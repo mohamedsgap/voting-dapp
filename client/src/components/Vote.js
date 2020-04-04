@@ -4,10 +4,10 @@ import './Vote.css'
 import Footer from './Footer.js'
 
 
-function Vote(){
+const Vote = () => {
     return(
         <React.Fragment>
-            <div class="Vote text-center">
+            <div class="vote text-center">
                 <div className="container">
                     <h2 className="text-center">Vote</h2>
                     <p className="description text-center">Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect
@@ -22,16 +22,14 @@ function Vote(){
                                         contribution that one man's towering intellect, 
                                         persistence and scientific vision can make to human peace and progress."</p>
 
-                                        <div className="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Choose Candidate
-                                            </button>
-                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
+                                        <label className="choose">
+                                            <p>Choose your favorite candidate :</p>
+                                            <select>
+                                                <option value="grapefruit">Grapefruit</option>
+                                                <option value="lime">Lime</option>
+                                                <option  value="coconut">Coconut</option>
+                                            </select>
+                                        </label>
                                     <Link to="/" class="card-link">Vote</Link> 
                                 </div>
                             </div>
@@ -46,16 +44,14 @@ function Vote(){
                                         contribution that one man's towering intellect, 
                                         persistence and scientific vision can make to human peace and progress."</p>
 
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Choose Candidate
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
+                                        <label>
+                                            <p>Choose your favorite candidate :</p>
+                                            <select>
+                                                <option value="grapefruit">Grapefruit</option>
+                                                <option value="lime">Lime</option>
+                                                <option  value="coconut">Coconut</option>
+                                            </select>
+                                        </label>
                                     <Link to="/" class="card-link">Vote</Link> 
                                 </div>
                             </div>
@@ -69,17 +65,14 @@ function Vote(){
                                     <p class="card-text">Borlaug's life and achievement are testimony to the far-reaching
                                         contribution that one man's towering intellect, 
                                         persistence and scientific vision can make to human peace and progress."</p>
-
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                               Choose Candidate
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
+                                        <label>
+                                            <p>Choose your favorite candidate :</p>
+                                            <select>
+                                                <option value="grapefruit">Grapefruit</option>
+                                                <option selected value="lime">Lime</option>
+                                                <option  value="coconut">Coconut</option>
+                                            </select>
+                                        </label>
                                     <Link to="/" class="card-link">Vote</Link> 
                                 </div>
                             </div>

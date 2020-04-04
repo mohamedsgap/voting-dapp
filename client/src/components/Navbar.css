@@ -3,10 +3,8 @@
     padding: 10px 0;
     overflow: hidden;
     background: #FFF;
-    position: relative;
     border-bottom: 1px solid #000;
-    position: sticky;
-}
+    }
 
 .navbar .logo {
     width: 50%;
@@ -58,6 +56,5 @@
 
 .navbar .ul-list .list-item .selected{
     color: #ec1c23;
-    background-color: #08526d;
 
 }
