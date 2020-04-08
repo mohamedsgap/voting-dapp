@@ -1,7 +1,7 @@
 
 .home {
-height: 630px;
-background: url('/images/Ethereum1.jpg');
+height: 640px;
+background: url('/images/4.jpg');
 background-size: cover;
 background-position: center;
 text-align: center;
@@ -17,20 +17,23 @@ position: relative;
 .home .home-information .home-title{
 font-size: 60px;
 font-weight: bold;
-color: #ec1c23;
+color: #fff;
+font-size: 110px;
 } 
 
 
 .home .home-information .home-info {
 font-size: 35px;
-    color: #ec1c23;
+    color: #DDD;
     margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: initial;
 }
 
 .home .home-information .home-description {    
     font-size: 20px;
     line-height: 1.5;
-    color: #ec1c23;
+    color: #EEE;
     margin-bottom: 20px
 }
 
