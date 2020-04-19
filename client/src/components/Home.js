@@ -1,8 +1,9 @@
 import React from 'react';
 import'./Home.css';
 import Footer from './Footer.js'
+import { Link } from 'react-router-dom';
 
-function Home(){
+const Home = () => {
     return(
         <React.Fragment>
             <div className="home" id="home">
@@ -13,9 +14,8 @@ function Home(){
                         <p className="home-description">
                         We're a professional <span>UX Designers</span> and Front-End Developers creating modern and resposive designs to Web and Mobile.                    
                         </p>
-                        <button className="home-btn">
-                         Let's Vote
-                        </button>
+                            <Link to ="/vote" className="home-btn"> Let's Vote</Link>
+                        
                     </div>
                 </div>
             </div> 

@@ -11,13 +11,12 @@ import Footer from './Footer.js'
             <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
-                            <img src="../images/messi.jpg" alt="choose us" title="Messi" />
+                            <img src="../images/4.jpg" alt="choose us" title="Messi" />
                         </div>
                         <div class="col-md-6 col-sm-12 ">
                             <h1> Why Blockchain?</h1 >
                             <p>Borlaug's life and achievement are testimony to the far-reachin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th
-                                Borlaug's life and achievement are testimony to the far-reachin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th
                                 Borlaug's life and achievement are testimony to the far-reachin
                                 r-reaching contribution thr-reaching contribution thr-reaching contribution th</p>    
