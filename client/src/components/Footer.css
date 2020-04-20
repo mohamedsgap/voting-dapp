@@ -1,0 +1,13 @@
+.copyright {
+    padding: 20px;
+    background-color: #b3b3b3;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+}
+
+
+@media (max-width: 576px) {
+    .copyright .info{
+        font-size: 13px;
+    }
+}

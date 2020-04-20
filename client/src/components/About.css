@@ -1,0 +1,56 @@
+@media (max-width: 576px) {
+.about-us {
+    padding: 0 0 50px;
+}
+}
+.about-us img {
+    max-width: 100%;
+
+}
+
+.about-us .col-md-6 {
+    padding: 0;
+
+}
+
+.about-us .col-md-6:last-child {
+    background-color: #08526d;
+    color: #FFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+}
+
+.about-us h1 {
+    margin: 40px;
+
+}
+
+
+.about-us p {
+    margin: 40px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.about-us .read-more {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 0 0 40px;
+    padding-top: 7px 20px;
+    background-color: #ed1d24;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+
+
+
+
+
+
+
+

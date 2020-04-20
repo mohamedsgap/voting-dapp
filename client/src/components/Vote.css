@@ -1,0 +1,60 @@
+.vote {
+    padding: 10px 0 100px;
+}
+
+.vote h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.vote .description {
+    line-height: 1.6;
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto 15px;
+    color: #6a6a6a;
+}
+.vote .card {
+    margin-bottom: 20px;
+}
+
+.vote .card .card-title {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #08526d;
+}
+
+.vote .card .card-link {
+    border-radius: 35px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    margin: 5px;
+    width: 130px;
+    background: #ed1d24;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 100ms ease-out;
+    display: inline-block;
+}
+
+.vote .card-link:hover {
+border: 2px solid  #08526d ;
+color: #ec1c23;
+background: #FFF;
+text-decoration: none;
+transition: 0.9s ease;
+
+}
+
+.vote .card label p{
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.vote .card select {
+    background-color: cyan;
+    border: 2px solid #ec1c23;
+    width: 200px;
+}
