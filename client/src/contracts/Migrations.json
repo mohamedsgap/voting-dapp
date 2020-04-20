@@ -63,24 +63,14 @@
   "ast": {
     "absolutePath": "/home/mohamedsgap/Development/grad-project/Frontend Grad Project/voting-dapp/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        36
-      ]
+      "Migrations": [36]
     },
     "id": 37,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".21",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".21", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:32:0"
       },
@@ -91,9 +81,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 36,
-        "linearizedBaseContracts": [
-          36
-        ],
+        "linearizedBaseContracts": [36],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -474,24 +462,14 @@
   "legacyAST": {
     "absolutePath": "/home/mohamedsgap/Development/grad-project/Frontend Grad Project/voting-dapp/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        36
-      ]
+      "Migrations": [36]
     },
     "id": 37,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".21",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".21", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:32:0"
       },
@@ -502,9 +480,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 36,
-        "linearizedBaseContracts": [
-          36
-        ],
+        "linearizedBaseContracts": [36],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -890,12 +866,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xEF57D4ce05389FB66E510ee51F6703C784ABAd0a",
-      "transactionHash": "0xe46273116ba2d11e7e56892ef17f7e7c86b2f993901167bf9f09d33df89eece7"
+      "address": "0xF864664C637e55d2d30421A56eD330bD2aB2F896",
+      "transactionHash": "0x316bd325133710dccc7af76c8117662b985acd750fc0a3ed1f3b4960ad93fc71"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-03-25T23:21:39.033Z",
+  "updatedAt": "2020-04-03T02:00:29.309Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
