@@ -77,12 +77,12 @@ const Vote = () => {
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="card">
-                <img class="card-img-top" src="../images/man.jpg" alt="cup" />
-                <div class="card-body">
-                  <h4 class="card-title">Candidate 3</h4>
-                  <p class="card-text">
+            <div className="col-md-6 col-lg-4">
+              <div className="card">
+                <img className="card-img-top" src="../images/man.jpg" alt="cup" />
+                <div className="card-body">
+                  <h4 className="card-title">Candidate 3</h4>
+                  <p className="card-text">
                     Borlaug's life and achievement are testimony to the
                     far-reaching contribution that one man's towering intellect,
                     persistence and scientific vision can make to human peace
@@ -92,13 +92,13 @@ const Vote = () => {
                     <p>Choose your favorite candidate :</p>
                     <select>
                       <option value="grapefruit">Grapefruit</option>
-                      <option selected value="lime">
+                      <option  value="lime">
                         Lime
                       </option>
                       <option value="coconut">Coconut</option>
                     </select>
                   </label>
-                  <Link to="/" class="card-link">
+                  <Link to="/" className="card-link">
                     Vote
                   </Link>
                 </div>
