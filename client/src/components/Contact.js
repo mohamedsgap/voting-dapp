@@ -3,60 +3,60 @@ import "./Contact.css";
 function Contact() {
   return (
     <section id="contact">
-      <div class="container">
-        <div class="box last">
-          <div class="row">
-            <div class="col-sm-6">
+      <div className="container">
+        <div className="box last">
+          <div className="row">
+            <div className="col-sm-6">
               <h1>Contact Form</h1>
               <p>
                 Pellentesque habitant morbi tristique senectus et netus et
                 malesuada fames ac turpis egestas.
               </p>
-              <div class="status alert alert-success"></div>
+              <div className="status alert alert-success"></div>
               <form
                 id="main-contact-form"
-                class="contact-form"
+                className="contact-form"
                 name="contact-form"
                 method="post"
                 action="sendemail.php"
                 role="form"
               >
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-sm-6">
+                    <div className="form-group">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         required="required"
                         placeholder="Name"
                       />
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
+                  <div className="col-sm-6">
+                    <div className="form-group">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         required="required"
                         placeholder="Email address"
                       />
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-sm-12">
+                    <div className="form-group">
                       <textarea
                         name="message"
                         id="message"
                         required="required"
-                        class="form-control"
+                        className="form-control"
                         rows="8"
                         placeholder="Message"
                       ></textarea>
                     </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-danger btn-lg">
+                    <div className="form-group">
+                      <button type="submit" className="btn btn-danger btn-lg">
                         Send Message
                       </button>
                     </div>
@@ -64,10 +64,10 @@ function Contact() {
                 </div>
               </form>
             </div>
-            <div class="col-sm-6 connect">
+            <div className="col-sm-6 connect">
               <h1>Our Address</h1>
-              <div class="row">
-                <div class="col-md-6">
+              <div className="row">
+                <div className="col-md-6">
                   <address>
                     <strong>Twitter, Inc.</strong>
                     <br />
@@ -80,22 +80,22 @@ function Contact() {
                 </div>
               </div>
               <h1>Connect with us</h1>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="social">
+              <div className="row">
+                <div className="col-md-6">
+                  <ul className="social">
                     <li>
                       <a href="#">
-                        <i class="icon-facebook icon-social"></i> Facebook
+                        <i className="icon-facebook icon-social"></i> Facebook
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icon-google-plus icon-social"></i> Google Plus
+                        <i className="icon-google-plus icon-social"></i> Google Plus
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icon-pinterest icon-social"></i> Pinterest
+                        <i className="icon-pinterest icon-social"></i> Pinterest
                       </a>
                     </li>
                   </ul>

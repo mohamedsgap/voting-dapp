@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 
 
 class App extends Component {
+
+  // comment this until finsih th frontend feat.
+  /*
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
@@ -55,11 +58,16 @@ class App extends Component {
     // Update state with the result.
     this.setState({ storageValue: response });
   };
-
+*/
   render() {
+
+    {/*
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
+
+  */}
+
     return (
       <BrowserRouter>
           <Navbar />
