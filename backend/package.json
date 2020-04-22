@@ -1,0 +1,8 @@
+{
+  "name": "voting-dapp-backend",
+  "version": "1.0.0",
+  "description": "buiding a backend for the voting dapp",
+  "main": "app.js",
+  "author": "Mohamed Abdel Nasser",
+  "license": "MIT"
+}
