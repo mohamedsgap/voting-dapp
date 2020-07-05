@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import "./Vote.css";
 
 const Vote = () => {
@@ -51,6 +50,22 @@ const Vote = () => {
   return (
     <React.Fragment>
       <div>{candidates}</div>
+      <div className="vote-form">
+        <form>
+          <select id="dropdown">
+            <option>Select Your favorite candidate</option>
+            <option value="0">None</option>
+            <option value="1">Candidate One</option>
+            <option value="2">Candidate Two</option>
+            <option value="3">CandiddateThree</option>
+          </select>
+        </form>
+      </div>
+      <div className="buttons-app">
+        <button className="gen-btn" type="submit" o>
+          Vote
+        </button>
+      </div>
     </React.Fragment>
   );
 };

@@ -1,19 +1,15 @@
 import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
-import getWeb3 from "./getWeb3";
-import {BrowserRouter, Route} from 'react-router-dom';
+//import getWeb3 from "./getWeb3";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Vote from './components/Vote';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
- 
-
+import Navbar from "./components/Navbar";
+import Vote from "./components/Vote";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 class App extends Component {
-
   // comment this until finsih th frontend feat.
   /*
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -60,21 +56,22 @@ class App extends Component {
   };
 */
   render() {
-
-    {/*
+    {
+      /*
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
 
-  */}
+  */
+    }
 
     return (
       <BrowserRouter>
-          <Navbar />
-          <Route exact path="/" component={Home} />
-          <Route  path="/About" component={About} />
-          <Route  path="/Vote" component={Vote} />
-          <Route  path="/contact" component={Contact} />
+        <Navbar />
+        <Route exact path="/" />
+        <Route path="/About" component={About} />
+        <Route path="/Vote" component={Vote} />
+        <Route path="/contact" component={Contact} />
         <Footer />
       </BrowserRouter>
     );
