@@ -1,22 +1,20 @@
 {
-  "name": "client",
+  "name": "open-react-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.9.5",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.9.0",
-    "clsx": "^1.1.0",
-    "markdown-to-jsx": "^6.11.0",
-    "prop-types": "^15.7.2",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-final-form": "^6.3.5",
-    "@popperjs/core": "^2.2.1",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "validator": "^12.2.0",
-    "web3": "1.2.2"
+    "react-scripts": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +36,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
