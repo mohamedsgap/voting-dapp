@@ -1,7 +1,7 @@
 import React from "react";
 import Web3 from "web3";
 import TruffleContract from "truffle-contract";
-import Election from "../contracts-deployment/Election.json";
+import Election from "./contracts/Election.json";
 
 class Vote extends React.Component {
   constructor(props) {
