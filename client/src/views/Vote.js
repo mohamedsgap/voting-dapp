@@ -3,6 +3,9 @@ import Web3 from "web3";
 import TruffleContract from "truffle-contract";
 import Election from "../contracts/Election.json";
 
+//const Web3 = require("web3");
+//const web3 = new Web3();
+
 class Vote extends React.Component {
   constructor(props) {
     super(props);
@@ -14,11 +17,13 @@ class Vote extends React.Component {
       voting: false
     };
 
+    /*
+    
     if (typeof web3 != "undefined") {
       this.web3Provider = web3.currentProvider;
     } else {
       this.web3Provider = new Web3.providers.HttpProvider(
-        "http://localhost:7545"
+        "https://rinkeby.infura.io/"
       );
     }
 
@@ -79,7 +84,8 @@ class Vote extends React.Component {
       .vote(candidateId, { from: this.state.account })
       .then(result => this.setState({ hasVoted: true }));
   }
-
+*/
+  }
   render() {
     return (
       <div class="row">
