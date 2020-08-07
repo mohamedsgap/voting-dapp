@@ -11,11 +11,8 @@
     "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
+    "truffle-contract": "^4.0.31",
     "web3": "^1.2.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
     "start": "react-scripts start",
