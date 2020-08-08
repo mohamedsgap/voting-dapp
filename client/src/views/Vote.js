@@ -18,12 +18,22 @@ class Vote extends React.Component {
     };
 
     /*
+    // MetaMask changed its API
     
     if (typeof web3 != "undefined") {
       this.web3Provider = web3.currentProvider;
+    
+    */
+
+    if (typeof window.ethereum !== "undefined") {
+      // Ethereum user detected. You can now use the provider.
+      this.web3Provider = window["ethereum"];
     } else {
-      this.web3Provider = new Web3.providers.HttpProvider(
+      /*this.web3Provider = new Web3.providers.HttpProvider(
         "https://rinkeby.infura.io/"
+      );*/
+      this.web3Provider = new Web3.providers.HttpProvider(
+        `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`
       );
     }
 
@@ -33,7 +43,7 @@ class Vote extends React.Component {
     this.election.setProvider(this.web3Provider);
 
     this.castVote = this.castVote.bind(this);
-    this.watchEvents = this.watchEvents.bind(this);
+    //this.watchEvents = this.watchEvents.bind(this);
   }
 
   componentDidMount() {
@@ -42,7 +52,7 @@ class Vote extends React.Component {
       this.setState({ account });
       this.election.deployed().then(electionInstance => {
         this.electionInstance = electionInstance;
-        this.watchEvents();
+        //this.watchEvents();
         this.electionInstance.candidatesCount().then(candidatesCount => {
           for (var i = 1; i <= candidatesCount; i++) {
             this.electionInstance.candidates(i).then(candidate => {
@@ -62,7 +72,7 @@ class Vote extends React.Component {
       });
     });
   }
-
+  /*
   watchEvents() {
     // TODO: trigger event when vote is counted, not when component renders
     this.electionInstance
@@ -77,23 +87,22 @@ class Vote extends React.Component {
         this.setState({ voting: false });
       });
   }
-
+  */
   castVote(candidateId) {
     this.setState({ voting: true });
     this.electionInstance
       .vote(candidateId, { from: this.state.account })
       .then(result => this.setState({ hasVoted: true }));
   }
-*/
-  }
+
   render() {
     return (
-      <div class="row">
-        <div class="col-lg-12 text-center">
+      <div className="row">
+        <div className="col-lg-12 text-center">
           <h1>Election Results</h1>
           <br />
           {this.state.loading || this.state.voting ? (
-            <p class="text-center">Loading...</p>
+            <p className="text-center">Loading...</p>
           ) : (
             <Content
               account={this.state.account}
@@ -137,18 +146,18 @@ class Form extends React.Component {
           this.props.castVote(this.candidateId.value);
         }}
       >
-        <div class="form-group">
+        <div className="form-group">
           <label>Select Candidate</label>
           <select
             ref={input => (this.candidateId = input)}
-            class="form-control"
+            className="form-control"
           >
             {this.props.candidates.map(candidate => {
               return <option value={candidate.id}>{candidate.name}</option>;
             })}
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Vote
         </button>
         <hr />
@@ -160,7 +169,7 @@ class Form extends React.Component {
 class Table extends React.Component {
   render() {
     return (
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th>#</th>
