@@ -38,7 +38,11 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
             <div className="footer-copyright">
-              Made by <a href="https://cruip.com">Cruip</a>. All right reserved
+              Made with ♥️ by{" "}
+              <a href="https://bu.edu.eg/en/">
+                BFCAI Blockchain Team [Grad Project]
+              </a>
+              . All right reserved ©️ 2020
             </div>
           </div>
         </div>
