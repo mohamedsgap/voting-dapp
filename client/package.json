@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.0.0",
     "bootstrap": "^4.5.2",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
