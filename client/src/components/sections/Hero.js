@@ -84,7 +84,7 @@ const Hero = ({
                     tag="a"
                     color="dark"
                     wideMobile
-                    href="https://github.com/cruip/open-react-template/"
+                    href="https://github.com/mohamedsgap/voting-dapp"
                   >
                     View Project Documentation
                   </Button>
