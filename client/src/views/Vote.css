@@ -7,3 +7,31 @@
   padding: 50px;
   margin: 50px;
 }
+
+.candidate-list {
+  text-align: center;
+  margin: 30px;
+}
+.form {
+  margin-bottom: 30px;
+}
+.vote {
+  display: flex;
+  background-color: #6163ff;
+  color: #eceded;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: inherit;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 50px;
+  width: 150px;
+  margin-left: 40%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}

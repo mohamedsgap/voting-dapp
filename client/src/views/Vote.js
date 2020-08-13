@@ -141,12 +141,13 @@ class Form extends React.Component {
   render() {
     return (
       <form
+        className="form"
         onSubmit={event => {
           event.preventDefault();
           this.props.castVote(this.candidateId.value);
         }}
       >
-        <div>
+        <div className="candidate-list">
           <label>Select Candidate</label>
           <select
             ref={input => (this.candidateId = input)}
@@ -157,7 +158,9 @@ class Form extends React.Component {
             })}
           </select>
         </div>
-        <button type="submit">Vote</button>
+        <button type="submit" className="vote">
+          Vote
+        </button>
         <hr />
       </form>
     );
