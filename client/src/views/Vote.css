@@ -1,0 +1,9 @@
+.voting {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.title {
+  padding: 50px;
+  margin: 50px;
+}

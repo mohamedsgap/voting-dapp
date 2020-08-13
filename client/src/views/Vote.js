@@ -2,7 +2,7 @@ import React from "react";
 import Web3 from "web3";
 import TruffleContract from "truffle-contract";
 import Election from "../contracts/Election.json";
-
+import "./Vote.css";
 //const Web3 = require("web3");
 //const web3 = new Web3();
 
@@ -97,9 +97,9 @@ class Vote extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <h1>Election Results</h1>
+      <div className="voting">
+        <div>
+          <h1 className="title">Voting Results</h1>
           <br />
           {this.state.loading || this.state.voting ? (
             <p className="text-center">Loading...</p>
@@ -146,7 +146,7 @@ class Form extends React.Component {
           this.props.castVote(this.candidateId.value);
         }}
       >
-        <div className="form-group">
+        <div>
           <label>Select Candidate</label>
           <select
             ref={input => (this.candidateId = input)}
@@ -157,9 +157,7 @@ class Form extends React.Component {
             })}
           </select>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Vote
-        </button>
+        <button type="submit">Vote</button>
         <hr />
       </form>
     );
@@ -169,7 +167,7 @@ class Form extends React.Component {
 class Table extends React.Component {
   render() {
     return (
-      <table className="table">
+      <table>
         <thead>
           <tr>
             <th>#</th>
