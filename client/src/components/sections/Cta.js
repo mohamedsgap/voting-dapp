@@ -59,7 +59,7 @@ const Cta = ({
         <div className={innerClasses}>
           <div className="cta-slogan">
             <h3 className="m-0">
-              Take a look at live vote transaction! [QUICK DEMO]
+              Take a look at live voting transaction! [A QUICK DEMO]
             </h3>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Cta = ({
           data-reveal-delay="800"
         >
           <a
-            data-video="https://player.vimeo.com/video/174002812"
+            data-video="https://player.vimeo.com/video/447355280"
             href="#0"
             aria-controls="video-modal"
             onClick={openModal}
@@ -87,7 +87,7 @@ const Cta = ({
           id="video-modal"
           show={videoModalActive}
           handleClose={closeModal}
-          video="https://player.vimeo.com/video/174002812"
+          video="https://player.vimeo.com/video/447355280"
           videoTag="iframe"
         />
       </div>
