@@ -112,7 +112,7 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="/vote" onClick={closeMenu}>
+                      <Link to="/sign" onClick={closeMenu}>
                         Vote
                       </Link>
                     </li>
@@ -121,7 +121,7 @@ const Header = ({
                     <ul className="list-reset header-nav-right">
                       <li>
                         <Link
-                          to="#0"
+                          to="/sign"
                           className="button button-primary button-wide-mobile button-sm"
                           onClick={closeMenu}
                         >

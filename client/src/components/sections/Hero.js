@@ -5,6 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import { Link } from "react-router-dom";
 
 const propTypes = {
   ...SectionProps.types
@@ -74,21 +75,18 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button
-                    tag="a"
-                    color="primary"
-                    wideMobile
-                    href="https://cruip.com/"
-                  >
-                    Get started
-                  </Button>
+                  <Link to="/sign">
+                    <Button tag="a" color="primary" wideMobile href="#">
+                      Vote
+                    </Button>
+                  </Link>
                   <Button
                     tag="a"
                     color="dark"
                     wideMobile
                     href="https://github.com/cruip/open-react-template/"
                   >
-                    View on Github
+                    View Project Documentation
                   </Button>
                 </ButtonGroup>
               </div>
@@ -100,7 +98,7 @@ const Hero = ({
             data-reveal-delay="800"
           >
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://player.vimeo.com/video/447146674"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
@@ -118,7 +116,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://player.vimeo.com/video/447146674"
             videoTag="iframe"
           />
         </div>

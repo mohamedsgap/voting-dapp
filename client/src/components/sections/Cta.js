@@ -76,7 +76,7 @@ const Cta = ({
           >
             <Image
               className="has-shadow"
-              src={require("./../../assets/images/video-placeholder.jpg")}
+              src={require("./../../assets/images/video-placeholder-extra.jpg")}
               alt="Hero"
               width={1100}
               height={350}
