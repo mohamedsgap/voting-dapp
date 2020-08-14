@@ -10,11 +10,12 @@ import * as serviceWorker from "./serviceWorker";
 import "./assets/scss/style.scss";
 
 const history = createBrowserHistory();
-
+const domain = process.env.REACT_APP_AUTHO_DOMAIN;
+const client = process.env.REACT_APP_AUTHO_CLIENT_ID;
 ReactDOM.render(
   <Auth0Provider
-    domain="process.env.DOMAIN"
-    clientId="process.env.CLIENT_ID"
+    domain={domain}
+    clientId={client}
     redirectUri={window.location.origin}
   >
     <Router history={history}>
