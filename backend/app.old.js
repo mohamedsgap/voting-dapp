@@ -1,3 +1,4 @@
+/*
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -37,3 +38,4 @@ app.use(bodyParser.json());
 app.use("/users", userRoutes);
 
 module.exports = app;
+*/
