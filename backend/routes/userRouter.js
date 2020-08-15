@@ -17,13 +17,13 @@ router.post("/sign", async (req, res) => {
         .status(400)
         .json({ msg: "The password needs to be at least 5 characters long." });
 
-    const existingUser = await User.findOne({ email: email });
+    const existingUser = await User.findOne({ natId: natId });
     if (existingUser)
       return res
         .status(400)
-        .json({ msg: "An account with this email already exists." });
+        .json({ msg: "An account with this National ID already exists." });
 
-    if (!displayName) displayName = email;
+    //if (!displayName) displayName = email;
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
@@ -53,12 +53,12 @@ router.post("/login", async (req, res) => {
     if (!user)
       return res
         .status(400)
-        .json({ msg: "No account with this email has been registered." });
+        .json({ msg: "No account with this National ID has been registered." });
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials." });
 
-    const token = jwt.sign({ id: user._id }, "RANDOM_TOKEN_SECRET");
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     res.json({
       token,
       user: {
@@ -86,7 +86,7 @@ router.post("/tokenIsValid", async (req, res) => {
     const token = req.header("x-auth-token");
     if (!token) return res.json(false);
 
-    const verified = jwt.verify(token, "RANDOM_TOKEN_SECRET");
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
     if (!verified) return res.json(false);
 
     const user = await User.findById(verified.id);
