@@ -128,7 +128,7 @@ const Sign = () => {
           </Link>
         ) : (
           <Link to="/vote">
-            <button type="submit" className="submit">
+            <button type="submit" className="submit" onSubmit={submit}>
               Sign up
             </button>
           </Link>
