@@ -7,7 +7,11 @@ require("dotenv").config();
 const app = express();
 
 mongoose
-  .connect(process.env.MONGODB_REAL_CONNECT)
+  .connect(process.env.MONGODB_REAL_CONNECT, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true
+  })
   .then(() => {
     console.log("'Successfully connected to MongoDB Atlas!'");
   })
@@ -30,6 +34,6 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-app.use("/api/auth", userRoutes);
+app.use("/users", userRoutes);
 
 module.exports = app;
