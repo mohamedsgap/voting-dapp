@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
 const User = require("../models/userModel");
+require("dotenv").config();
 
 router.post("/sign", async (req, res) => {
   try {
