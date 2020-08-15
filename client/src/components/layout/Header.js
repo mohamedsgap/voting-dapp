@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from "./partials/Logo";
+import UserContext from "../../userContext";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -33,6 +34,20 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+
+  const { userData, setUserData } = useContext(UserContext);
+
+  const history = useHistory();
+
+  const sign = () => history.push("/sign");
+  const login = () => history.push("/login");
+  const logout = () => {
+    setUserData({
+      token: undefined,
+      user: undefined
+    });
+    localStorage.setItem("auth-token", "");
+  };
 
   useEffect(() => {
     isActive && openMenu();
@@ -119,15 +134,27 @@ const Header = ({
                   </ul>
                   {!hideSignin && (
                     <ul className="list-reset header-nav-right">
-                      <li>
-                        <Link
-                          to="/sign"
-                          className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
-                        >
-                          Sign up
-                        </Link>
-                      </li>
+                      {userData.user ? (
+                        <li>
+                          <Link
+                            to="/"
+                            className="button button-primary button-wide-mobile button-sm"
+                            onClick={closeMenu}
+                          >
+                            Logout
+                          </Link>
+                        </li>
+                      ) : (
+                        <li>
+                          <Link
+                            to="/sign"
+                            className="button button-primary button-wide-mobile button-sm"
+                            onClick={closeMenu}
+                          >
+                            Sign up
+                          </Link>
+                        </li>
+                      )}
                     </ul>
                   )}
                 </div>

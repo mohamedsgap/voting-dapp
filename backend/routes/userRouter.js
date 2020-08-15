@@ -14,17 +14,15 @@ router.post("/sign", async (req, res) => {
     if (!email || !password || !metaMaskAddress || !natId)
       return res.status(400).json({ msg: "Not all fields have been entered." });
     if (password.length < 5)
-      return res
-        .status(400)
-        .json({ msg: "The password needs to be at least 5 characters long." });
+      return res.status(400).json({
+        msg: "The password needs to be at least 5 characters long, try again!"
+      });
 
     const existingUser = await User.findOne({ natId: natId });
     if (existingUser)
       return res
         .status(400)
         .json({ msg: "An account with this National ID already exists." });
-
-    //if (!displayName) displayName = email;
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
