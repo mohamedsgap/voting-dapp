@@ -23,7 +23,6 @@
 .pass-input {
   margin-left: 190px;
 }
-
 .meta-input {
   margin-left: 100px;
 }
@@ -56,7 +55,7 @@
 .submit-login {
   display: flex;
   color: #6163ff;
-  background-color: yellow;
+  background-color: darkkhaki;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;

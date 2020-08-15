@@ -16,16 +16,9 @@
   padding: 10px;
   margin: 10px;
 }
-.email-input {
-  margin-left: 230px;
-}
 
 .pass-input {
   margin-left: 190px;
-}
-
-.meta-input {
-  margin-left: 100px;
 }
 
 .nat-input {
@@ -56,7 +49,7 @@
 .submit-login {
   display: flex;
   color: #6163ff;
-  background-color: yellow;
+  background-color: darkkhaki;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;

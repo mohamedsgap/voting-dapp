@@ -1,5 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import Axios from "axios";
+import UserContext from "../userContext";
+import ErrorNotice from "../errorNotice";
+
 import "./Sign.css";
 
 const Sign = () => {
@@ -7,6 +11,10 @@ const Sign = () => {
   const [valuePass, setValuePass] = useState("");
   const [valueMeta, setValueMeta] = useState("");
   const [valueNat, setValueNat] = useState("");
+  const [error, setError] = useState();
+
+  const { setUserData } = useContext(UserContext);
+  const history = useHistory();
 
   const fillValueEmail = e => {
     setValueEmail(e.target.value);
@@ -24,9 +32,38 @@ const Sign = () => {
     alert("please, check and enter valid data!");
   };
 
+  const submit = async e => {
+    e.preventDefault();
+
+    try {
+      const newUser = {
+        valueEmail,
+        valuePass,
+        valueMeta,
+        valueNat
+      };
+      await Axios.post("/users/sign", newUser);
+      const loginRes = await Axios.post("/users/login", {
+        valueNat,
+        valuePass
+      });
+      setUserData({
+        token: loginRes.data.token,
+        user: loginRes.data.user
+      });
+      localStorage.setItem("auth-token", loginRes.data.token);
+      history.push("/vote");
+    } catch (err) {
+      err.response.data.msg && setError(err.response.data.msg);
+    }
+  };
+
   return (
     <div className="sign">
-      <form>
+      {error && (
+        <ErrorNotice message={error} clearError={() => setError(undefined)} />
+      )}
+      <form onSubmit={submit}>
         <h2 className="title">Create voting account</h2>
         <div className="email-pass">
           <div className="email">

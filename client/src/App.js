@@ -1,8 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useLocation, Switch } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
+import UserContext from "./userContext";
 import ReactGA from "react-ga";
+import Axios from "axios";
 
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
@@ -24,6 +26,34 @@ const trackPage = page => {
 const App = () => {
   const childRef = useRef();
   let location = useLocation();
+  const [userData, setUserData] = useState({
+    token: undefined,
+    user: undefined
+  });
+
+  useEffect(() => {
+    const checkLoggedIn = async () => {
+      let token = localStorage.getItem("auth-token");
+      if (token === null) {
+        localStorage.setItem("auth-token", "");
+        token = "";
+      }
+      const tokenRes = await Axios.post("/users/tokenIsValid", null, {
+        headers: { "x-auth-token": token }
+      });
+      if (tokenRes.data) {
+        const userRes = await Axios.get("/users/", {
+          headers: { "x-auth-token": token }
+        });
+        setUserData({
+          token,
+          user: userRes.data
+        });
+      }
+    };
+
+    checkLoggedIn();
+  }, []);
 
   useEffect(() => {
     const page = location.pathname;
@@ -37,12 +67,14 @@ const App = () => {
     <ScrollReveal
       ref={childRef}
       children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute path="/vote" component={Vote} layout={LayoutDefault} />
-          <AppRoute path="/sign" component={Sign} layout={LayoutDefault} />
-          <AppRoute path="/login" component={Login} layout={LayoutDefault} />
-        </Switch>
+        <UserContext.Provider value={{ userData, setUserData }}>
+          <Switch>
+            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute path="/vote" component={Vote} layout={LayoutDefault} />
+            <AppRoute path="/sign" component={Sign} layout={LayoutDefault} />
+            <AppRoute path="/login" component={Login} layout={LayoutDefault} />
+          </Switch>
+        </UserContext.Provider>
       )}
     />
   );
