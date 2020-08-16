@@ -1,3 +1,17 @@
+/*
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+const Sign = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Sign up</button>;
+};
+
+export default Sign;
+*/
+
+/*
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sign.css";
@@ -108,3 +122,4 @@ const Sign = () => {
 };
 
 export default Sign;
+*/

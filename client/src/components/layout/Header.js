@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -33,6 +34,9 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+  const { isAuthenticated, loading, isLoading } = useAuth0();
 
   useEffect(() => {
     isActive && openMenu();
@@ -55,6 +59,10 @@ const Header = ({
     document.body.classList.remove("off-nav-is-active");
     nav.current && (nav.current.style.maxHeight = null);
     setIsactive(false);
+  };
+
+  const showMessage = () => {
+    alert("Sorry, you must Sign Up / Login to VOTE");
   };
 
   const keyPress = e => {
@@ -112,21 +120,38 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="/sign" onClick={closeMenu}>
-                        Vote
-                      </Link>
+                      {isLoading || loading ? (
+                        false
+                      ) : isAuthenticated ? (
+                        <Link to="/vote" onClick={closeMenu}>
+                          Vote
+                        </Link>
+                      ) : (
+                        <Link to="/" onClick={showMessage}>
+                          Vote
+                        </Link>
+                      )}
                     </li>
                   </ul>
                   {!hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
-                        <Link
-                          to="/sign"
+                        <button
                           className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
+                          onClick={() => loginWithRedirect()}
                         >
-                          Sign up
-                        </Link>
+                          Sign Up
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="button button-primary button-wide-mobile button-sm ml-2"
+                          onClick={() =>
+                            logout({ returnTo: window.location.origin })
+                          }
+                        >
+                          Log Out
+                        </button>
                       </li>
                     </ul>
                   )}

@@ -75,7 +75,7 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Link to="/sign">
+                  <Link to="/vote">
                     <Button tag="a" color="primary" wideMobile href="#">
                       Vote
                     </Button>
@@ -84,7 +84,7 @@ const Hero = ({
                     tag="a"
                     color="dark"
                     wideMobile
-                    href="https://github.com/mohamedsgap/voting-dapp"
+                    href="https://drive.google.com/file/d/1urMAkoV7yOTyKftshZrKCJp7HCsedwLJ/view?fbclid=IwAR1VSd3gCRfCAqj0cmenWGyVWu9xqIwJVd9WmiYLX7l50ssYk9mW8HPy_qU"
                   >
                     View Project Documentation
                   </Button>

@@ -14,8 +14,8 @@ const domain = process.env.REACT_APP_AUTHO_DOMAIN;
 const client = process.env.REACT_APP_AUTHO_CLIENT_ID;
 ReactDOM.render(
   <Auth0Provider
-    domain={domain}
-    clientId={client}
+    domain="mohamedsgap.us.auth0.com"
+    clientId="ftmzZ91ydF6hBr6Kdt75QLB7b1rboHa2"
     redirectUri={window.location.origin}
   >
     <Router history={history}>
