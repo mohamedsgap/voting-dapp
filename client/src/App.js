@@ -10,8 +10,6 @@ import LayoutDefault from "./layouts/LayoutDefault";
 // Views
 import Home from "./views/Home";
 import Vote from "./views/Vote";
-import Sign from "./views/Sign";
-import Login from "./views/Login";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
