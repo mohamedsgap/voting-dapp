@@ -120,9 +120,7 @@ const Header = ({
                     )}
                   >
                     <li>
-                      {isLoading || loading ? (
-                        false
-                      ) : isAuthenticated ? (
+                      {isAuthenticated ? (
                         <Link to="/vote" onClick={closeMenu}>
                           Vote
                         </Link>
