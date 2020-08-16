@@ -40,8 +40,6 @@ const App = () => {
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute path="/vote" component={Vote} layout={LayoutDefault} />
-          {/*<AppRoute path="/sign" component={Sign} layout={LayoutDefault} />*/}
-          {/*<AppRoute path="/login" component={Login} layout={LayoutDefault} />*/}
         </Switch>
       )}
     />
