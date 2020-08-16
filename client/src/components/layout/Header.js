@@ -36,7 +36,7 @@ const Header = ({
   const hamburger = useRef(null);
   const { loginWithRedirect } = useAuth0();
   const { logout } = useAuth0();
-  const { isAuthenticated, loading, isLoading } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   useEffect(() => {
     isActive && openMenu();
