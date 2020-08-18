@@ -6,6 +6,7 @@ import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const propTypes = {
   ...SectionProps.types
@@ -26,6 +27,11 @@ const Hero = ({
   ...props
 }) => {
   const [videoModalActive, setVideomodalactive] = useState(false);
+  const { isAuthenticated } = useAuth0();
+
+  const showMessage = () => {
+    alert("Sorry, you must Sign Up / Login to VOTE");
+  };
 
   const openModal = e => {
     e.preventDefault();
@@ -75,16 +81,24 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Link to="/sign">
-                    <Button tag="a" color="primary" wideMobile href="#">
-                      Vote
-                    </Button>
-                  </Link>
+                  {isAuthenticated ? (
+                    <Link to="/vote">
+                      <Button tag="a" color="primary" wideMobile>
+                        Vote
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Link to="/" onClick={showMessage}>
+                      <Button tag="a" color="primary" wideMobile>
+                        Vote
+                      </Button>
+                    </Link>
+                  )}
                   <Button
                     tag="a"
                     color="dark"
                     wideMobile
-                    href="https://github.com/mohamedsgap/voting-dapp"
+                    href="https://drive.google.com/file/d/1urMAkoV7yOTyKftshZrKCJp7HCsedwLJ/view?fbclid=IwAR1VSd3gCRfCAqj0cmenWGyVWu9xqIwJVd9WmiYLX7l50ssYk9mW8HPy_qU"
                   >
                     View Project Documentation
                   </Button>

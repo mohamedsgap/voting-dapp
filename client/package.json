@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.0.0",
     "bootstrap": "^4.5.2",
     "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.15",
     "mdbreact": "^4.27.0",
     "node-sass": "^4.13.1",
