@@ -49,4 +49,4 @@ yarn start || npm run start
 
 ```
 
-🎉🎉🎉 Made with ♥️ by Benha University Blockchain Team [Grad Project]. 🎉🎉🎉
+🎉🎉🎉 Made with ♥️ by Mohamed Abdel Nasser && Mohamed Khaled. 🎉🎉🎉
