@@ -7,6 +7,7 @@
     "bootstrap": "^4.5.2",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
+    "gh-pages": "^3.1.0",
     "lodash": "^4.17.15",
     "mdbreact": "^4.27.0",
     "node-sass": "^4.13.1",
