@@ -1,5 +1,6 @@
 {
   "name": "open-react-template",
+  "homepage": "https://mohamedsgap.github.io/voting-dapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +22,8 @@
     "web3": "^1.2.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
